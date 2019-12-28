@@ -1,0 +1,2 @@
+# ChartJS
+mattermost chartjs plugin

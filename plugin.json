@@ -1,0 +1,8 @@
+{
+    "id": "com.spikeassociates.tings-chartjs",
+    "name": "ChartJS ting",
+    "description": "Support for ChartJS messages",
+    "webapp": {
+        "bundle_path": "main.js"
+    }
+}
