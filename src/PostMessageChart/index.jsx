@@ -1,7 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getPost } from 'mattermost-redux/selectors/entities/posts';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend,CategoryScale,LinearScale,PointElement,LineElement,BarElement,Title } from 'chart.js';
 import { Bar, Line, Pie } from 'react-chartjs-2';
+
+
+ChartJS.register(ArcElement, Tooltip, Legend,CategoryScale,LinearScale,PointElement,
+  LineElement,
+  BarElement,
+  Title);
+
 
 const charts = {
   Pie: {
@@ -30,6 +38,7 @@ const PostMessageChart = ({ chartData }) => {
   const chart = charts[type] || charts['Bar'];
   const ChartComponent = chart.component;
 
+
   return <ChartComponent {...chartOptions} {...chart.options || {}} />;
 };
 
@@ -38,10 +47,12 @@ const mapStateToProps = (state, ownProps) => {
   const post = getPost(state, postId);
 
   try {
+   
     if (post.props && post.props.chartdata) {
-      return { chartData: JSON.parse(post.props.chartdata) };
+      return { chartData: post.props.chartdata };
     }
-  } catch (e) {}
+  } catch (e) {
+  }
 
   return {};
 };
