@@ -69,5 +69,6 @@ To test the plugin, you'll need to send a payload to the webhook endpoint you cr
 
 }}
    
+## ScreenShots
 
 ![Sample Output](chartjs.png)
