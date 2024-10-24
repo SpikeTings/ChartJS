@@ -17,17 +17,17 @@ To get started with this plugin, please follow these steps:
 
 3. Choose the channel where you want to receive webhook payloads, then click **Add** to create the webhook. This action will generate a unique webhook endpoint URL.
 
-   **Note:** Treat this endpoint as a secret. Anyone who has it will be able to post messages to your Mattermost instance.
+   **Note:** Treat this endpoint as a secret. Anyone who has it can post messages to your Mattermost instance.
 
 ## Testing the Plugin
 
-To test the plugin, you'll need to send a payload to the webhook endpoint you created in the previous step. You can use HTTP POST requests to do this. Here's how:
+To test the plugin, you must send a payload to the webhook endpoint you created in the previous step. You can use HTTP POST requests to do this. Here's how:
 
-1. Use the obtained webhook endpoint URL, which should look something like this: `https://your-mattermost-server.com/hooks/xxx-generatedkey-xxx`.
+1. Use the obtained webhook endpoint URL, which should look like this: `https://your-mattermost-server.com/hooks/xxx-generatedkey-xxx`.
 
 2. Send an HTTP POST request to the webhook endpoint with the payload. Below is an example of a sample payload sent from Postman:
 
-   ```json
+```json
        {
   "response_type": "in_channel",
   "attachments": [
@@ -66,8 +66,8 @@ To test the plugin, you'll need to send a payload to the webhook endpoint you cr
       ]
     }
   }
-
 }}
+```
    
 ## ScreenShots
 
