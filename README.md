@@ -1,4 +1,5 @@
 # ChartJS
+
 mattermost chartjs plugin
 
 # Mattermost Plugin
@@ -28,7 +29,7 @@ To test the plugin, you must send a payload to the webhook endpoint you created 
 2. Send an HTTP POST request to the webhook endpoint with the payload. Below is an example of a sample payload sent from Postman:
 
 ```json
-       {
+{
   "response_type": "in_channel",
   "attachments": [
     {
@@ -38,35 +39,36 @@ To test the plugin, you must send a payload to the webhook endpoint you created 
   ],
   "props": {
     "chartdata": {
-    "type": "Pie",
-    "data": {
-      "labels": ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-      "datasets": [
-        {
-          "label": "# of Votes",
-          "data": [12, 19, 3, 5, 2, 3],
-          "backgroundColor": [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)"
-          ],
-          "borderColor": [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)"
-          ],
-          "borderWidth": 1
-        }
-      ]
+      "type": "Pie",
+      "data": {
+        "labels": ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        "datasets": [
+          {
+            "label": "# of Votes",
+            "data": [12, 19, 3, 5, 2, 3],
+            "backgroundColor": [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            "borderColor": [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ],
+            "borderWidth": 1
+          }
+        ]
+      }
     }
   }
-}}
+}
 ```
    
 ## ScreenShots
